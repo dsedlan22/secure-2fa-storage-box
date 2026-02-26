@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sigurna kutija – autorizacija</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="dashboard-header">
+      <h1>Sigurna kutija – korisnički portal</h1>
+      <p class="muted subtitle">
+        Ova aplikacija služi za prikaz autentikacijske fraze i nadzor pristupa sigurnoj kutiji.
+      </p>
+    </header>
+
+    <!-- Session / Fraza -->
+    <section class="card card-session">
+      <div class="card-header">
+        <span class="card-icon" aria-hidden="true">🔒</span>
+        <h2>Sesija / Fraza</h2>
+      </div>
+      <div class="session-content">
+        <div class="session-row">
+          <span class="label">Session ID:</span>
+          <span class="value mono" id="sessionId">-</span>
+        </div>
+        <div class="session-row phrase-row">
+          <span class="label">Fraza:</span>
+          <span class="phrase value mono" id="phrase">-</span>
+        </div>
+        <p class="muted hint" id="expires">Prislonite NFC karticu na uređaj i izgovorite prikazanu frazu.</p>
+      </div>
+    </section>
+
+    <!-- Emergency Unlock -->
+    <section class="card card-emergency">
+      <div class="card-header">
+        <span class="card-icon" aria-hidden="true">🚨</span>
+        <h2>Emergency unlock</h2>
+      </div>
+      <p class="muted emergency-desc">
+        Daljinsko otključavanje u nuždi (administratorska funkcija).
+      </p>
+      <button type="button" id="btnEmergency" class="btn-emergency">EMERGENCY UNLOCK</button>
+      <p class="muted" id="emergencyStatus"></p>
+    </section>
+
+    <!-- Povijest pristupa -->
+    <section class="card card-logs">
+      <div class="card-header">
+        <span class="card-icon" aria-hidden="true">📋</span>
+        <h2>Povijest pristupa</h2>
+      </div>
+      <button type="button" id="btnLoadLogs" class="btn-secondary">Učitaj logove</button>
+      <div id="logs" class="logs-container"></div>
+    </section>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
