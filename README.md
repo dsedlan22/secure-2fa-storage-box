@@ -8,6 +8,10 @@ The project demonstrates the integration of embedded systems, cloud services, an
 
 The system leverages ESP32 microcontroller capabilities together with Microsoft Azure services to provide secure access control, monitoring, and remote management functionality.
 
+## Project Demonstration
+
+[![Watch the demo](https://img.youtube.com/vi/ReRAZHPO0A0/maxresdefault.jpg)](https://youtu.be/ReRAZHPO0A0)
+
 ---
 
 ## Project Goals
